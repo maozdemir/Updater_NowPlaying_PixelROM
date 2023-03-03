@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="ambient_play"
+    android:title="@string/ambient_play_title"  android:layout_height="fill_parent" android:layout_width="fill_parent">
+
+    <!-- Illustration for Ambient Play -->
+
+    <androidx.preference.Preference
+        android:enabled="false"
+        android:key="ambient_play_illustration"
+        android:layout="@layout/ambient_play_illustration" />
+
+    <androidx.preference.PreferenceCategory>
+
+        <androidx.preference.SwitchPreference
+            android:defaultValue="true"
+            android:key="ambient_disabler"
+            android:summary="Enable or disable Now Playing service"
+            android:title="@string/ambient_play_title" />
+
+        <androidx.preference.Preference
+            android:key="ambient_history"
+            android:summary="View songs recognized previously"
+            android:title="@string/ambient_play_history"/>
+
+
+        <androidx.preference.SwitchPreference
+            android:background="?android:attr/colorButtonNormal"
+            android:defaultValue="true"
+            android:dependency="ambient_disabler"
+            android:key="ambient_notification"
+            android:summary="@string/ambient_play_notifications_summary"
+            android:title="@string/ambient_play_notifications_title" />
+
+    </androidx.preference.PreferenceCategory>
+
+    <androidx.preference.PreferenceCategory
+        android:key="ambient_recognition_footer_preference"
+        android:selectable="false"
+        android:title="@string/ambient_play_help_text" />
+
+</androidx.preference.PreferenceScreen>

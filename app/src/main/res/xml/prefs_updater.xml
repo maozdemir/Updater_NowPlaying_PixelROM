@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="ambient_play"
+    android:title="@string/ambient_play_title"  android:layout_height="fill_parent" android:layout_width="fill_parent">
+
+    <androidx.preference.PreferenceCategory>
+
+        <androidx.preference.SwitchPreference
+            android:background="@color/accent"
+            android:defaultValue="true"
+            android:key="isAutoCheckEnabled"
+            android:title="Check for updates automatically" />
+        <androidx.preference.ListPreference
+            android:key="checkFrequency"
+            android:title="Autochecking frequency"
+            android:entries="@array/update_frequency_str"
+            android:entryValues="@array/update_frequency_val"
+            />
+        <androidx.preference.PreferenceCategory
+            android:title="disrupt! Kernel Preferences"
+            >
+            <androidx.preference.ListPreference
+                android:title="Subscription type"
+                android:dialogTitle="Subscription type"
+                android:key="kernelSubscription"
+                />
+
+        </androidx.preference.PreferenceCategory>
+    </androidx.preference.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

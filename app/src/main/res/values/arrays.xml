@@ -1,0 +1,24 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+    <string-array name="update_frequency_str">
+        <item name="update_daily">Daily</item>
+        <item name="update_weekly">Weekly</item>
+        <item name="update_monthly">Monthly</item>
+    </string-array>
+
+    <string-array name="update_frequency_val">
+        <item name="daily">1</item>
+        <item name="weekly">2</item>
+        <item name="monthly">3</item>
+    </string-array>
+</resources>
